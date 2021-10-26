@@ -1,1 +1,5 @@
+com\example\efros\demo\jwt\service\AccountService.class
+com\example\efros\demo\jwt\web\AccountController.class
+domens\Industry.class
 com\example\efros\demo\jwt\Application.class
+domens\Account.class
