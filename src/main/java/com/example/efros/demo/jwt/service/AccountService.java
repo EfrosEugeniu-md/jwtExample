@@ -13,7 +13,7 @@ public class AccountService {
     public AccountService(){
         accountList=new ArrayList<>();
         //Account account=new Account(1L,"A","B", Industry.A,"C","D");
-        accountList.add(new Account(1L,"A","B", Industry.A,"C","D"));
+        accountList.add(new Account(1,"A","B", Industry.A,"C","D",null));
 
     }
 
@@ -30,8 +30,24 @@ public class AccountService {
         return account;
     }
 
-
+   public Account findByUsername(String name){
+        for (Account account:accountList){
+            if(account.getUsername()==name){
+                return account;
+            }
+        }
+        return null;
+   }
     public void delete(Integer id) {
         accountList.remove(id);
+    }
+
+    public boolean existsByUsername(String username) {
+        for (Account account:accountList){
+            if(account.getUsername()==username){
+                return true;
+            }
+        }
+        return false;
     }
 }

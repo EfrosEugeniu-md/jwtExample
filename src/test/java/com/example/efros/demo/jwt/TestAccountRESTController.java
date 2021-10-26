@@ -46,8 +46,8 @@ public class TestAccountRESTController {
 
     @BeforeEach
     void init() {
-        accountThis = new Account(300L, "A", "B", Industry.A,"C","D");
-        accountThisModify = new Account(300L, "A", "B", Industry.A,"Cc","Dd");
+        accountThis = new Account(300, "A", "B", Industry.A,"C","D",null);
+        accountThisModify = new Account(300, "A", "B", Industry.A,"Cc","Dd",null);
     }
 
     @Test
